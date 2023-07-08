@@ -1,6 +1,9 @@
 import pandas as pd
 import os
 import requests
+from bs4 import BeautifulSoup
+import googlesearch
+
 
 athleteStats = pd.read_csv(os.path.join("archive/", "athlete_events.csv"))
 
@@ -63,8 +66,15 @@ def obesity(gender, manbmi, womanbmi, bmiCalc):
 
 query = athleteName + " personal bests"
 
-r = requests.get('https://www.google.com/search?q={}'.format(query))
-personalBest = r.content
+url = googlesearch.search(query, start=1, stop=1, pause=1, tld="co.in")
+
+r = requests.get(list(url)[0])
+
+soup = BeautifulSoup(r.content, "html.parser")
+text = soup.text.lower()
+
+foundText = text.find("personal")
+print(text[foundText:foundText + 100] + " \n")
 # Christine Jacoba Aaftink
 
 
@@ -89,5 +99,5 @@ for num in matchedRows:
     print(f"Event: {event}")
     print(f"Year: {year}")
     obesity(sex, manBMI, womanBMI, bmi)
-    print(personalBest)
+
     print("\n")
