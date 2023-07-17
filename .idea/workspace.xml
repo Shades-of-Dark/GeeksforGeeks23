@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54df18bc-5304-465b-9a5c-a50da142b696" name="Changes" comment="Formatting a data set and trained the model and plots it">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trained_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model.joblib" afterDir="false" />
-    </list>
+    <list default="true" id="54df18bc-5304-465b-9a5c-a50da142b696" name="Changes" comment="Code refining and add comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689580715394</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Code refining and add comments">
+      <created>1689610570348</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689610570348</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -250,6 +254,7 @@
     <MESSAGE value="social media data set" />
     <MESSAGE value="adding finishing touches to olympic bot.py" />
     <MESSAGE value="Formatting a data set and trained the model and plots it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatting a data set and trained the model and plots it" />
+    <MESSAGE value="Code refining and add comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code refining and add comments" />
   </component>
 </project>
