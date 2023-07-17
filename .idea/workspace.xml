@@ -4,38 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54df18bc-5304-465b-9a5c-a50da142b696" name="Changes" comment="adding finishing touches to olympic bot.py">
-      <change afterPath="$PROJECT_DIR$/.idea/GeeksforGeeks23.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/GDP.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/Summer_olympic_Medals.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/coaches.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/medals.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/medals_total.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/olympics_medals_country_wise.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/technical_officials.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/testdata.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/train.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/combined_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extractdata.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/installpackage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/machinelearningmodels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/medalpredict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trained_model.joblib" afterDir="false" />
+    <list default="true" id="54df18bc-5304-465b-9a5c-a50da142b696" name="Changes" comment="Formatting a data set and trained the model and plots it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/Athletes.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/Coaches.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/EntriesGender.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/Medals.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/Teams.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/reddit_tokyo_2020.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/olympicbot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trained_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model.joblib" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,11 +160,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.downloadrequests" />
-      <item itemvalue="Python.extractdata" />
-      <item itemvalue="Python.installpackage" />
-      <item itemvalue="Python.medalpredict" />
       <item itemvalue="Python.olympicbot" />
+      <item itemvalue="Python.downloadrequests" />
+      <item itemvalue="Python.medalpredict" />
+      <item itemvalue="Python.installpackage" />
+      <item itemvalue="Python.extractdata" />
     </list>
     <recent_temporary>
       <list>
@@ -248,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688829138491</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Formatting a data set and trained the model and plots it">
+      <created>1689580715394</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689580715394</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -271,6 +249,7 @@
     <MESSAGE value="fixed some interpeter issues and imported dataset" />
     <MESSAGE value="social media data set" />
     <MESSAGE value="adding finishing touches to olympic bot.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding finishing touches to olympic bot.py" />
+    <MESSAGE value="Formatting a data set and trained the model and plots it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting a data set and trained the model and plots it" />
   </component>
 </project>
