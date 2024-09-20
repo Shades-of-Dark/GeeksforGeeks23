@@ -1,4 +1,3 @@
-# imports all the modules
 import pandas as pd
 import os
 import numpy as np
@@ -8,70 +7,72 @@ import matplotlib.pyplot as plt
 import mplcursors
 import joblib
 
-# Lots of gaps in my data set....
-# Its hard to fill in data for over 200 countries
-# but I tried to find data on most of the well known countries :(
-
-# CSV loading and data refining
-# we call the variable df for data frame
+# Load the existing DataFrame
 df = pd.read_csv(os.path.join("archive", "testdata.csv"))
 df.dropna(inplace=True)
 
-# creates variables for all the data we're using
+
+# Create variables for the data
 countryNames = df["Country"]
 x = df[['Population', 'GDP', 'Total']].values
 y = df["Current Total"].values
 
+# Load the new CSV file
+#if os.path.exists("results.csv"):
+  #  newxcount = pd.read_csv("results.csv")
+   # if len(newxcount) == len(df):
+   #     print("Put in 2020 dataset here")
+  #      twentytwentydata = newxcount[["2020MedalCounts"]]
+  #  else:
+  #      print("Error: Length of new data does not match the existing DataFrame.")
+
+
+
 Population = df.Population.values
 GDP = df.GDP.values
 
-# if we already have a model file, load that
+# Load or create the model
 if os.path.exists("trained_model.joblib"):
     model = joblib.load("trained_model.joblib")
-
-# otherwise we create a new model to use
 else:
-    # initializes our random forest
+
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-# fits our model to our data
+
+# Fit the model
 model.fit(x, y)
 
-# Formats a prediction
+# Make predictions
 yPred = model.predict(x)
+new_data = pd.DataFrame(yPred, columns=['Data'])
+
+# tried to create 2024 predictions didnt work
+#df.insert(2, "2020MedalCounts", twentytwentydata.values)
+#model.apply(df[["Population", "GDP", "2020MedalCounts"]])
+#olympics2024predictions = model.predict(df[["Population", "GDP", "2020MedalCounts"]])
+#print(olympics2024predictions)
+#
+
+# Save predictions to CSV
+new_data.to_csv('results.csv', header=["2020MedalCounts"], index=False)
 
 predicted_values = np.array(yPred)
 
-# Gets rid of scientific notation in print statements
-np.set_printoptions(suppress=True)
-
-# Print the mean squared error
+# Print errors
 print("Mean Squared Error:", mean_squared_error(y, predicted_values))
 print("Mean Absolute Error:", mean_absolute_error(y, predicted_values))
 
-# Creates a color palette for variety
+# Plotting
 colorPalette = plt.colormaps.get_cmap('tab10').colors
-
-# Creates a common x value for spacing and because
-# we dont have a x value that would make sense to correlate the countries
 indices = range(0, len(predicted_values) * 2, 2)
 
-# Plots our points on a graph
 prediction = plt.scatter(indices, predicted_values)
 actualVals = plt.scatter(indices, y, color=colorPalette[8])
 values2016 = plt.scatter(indices, df["Total"], color=colorPalette[3])
 
-# Creates a cursor object to hover over data points
 cursor = mplcursors.cursor(hover=True)
-
-# Adds text for when the cursor is hovering over a point
 cursor.connect("add", lambda sel: sel.annotation.set_text(f"{countryNames[sel.index]}\nPredicted Val: {round(predicted_values[sel.index])}\nActual Val: {y[sel.index]}\n2016 Val: {df['Total'][sel.index]}\nGDP (in mil): {GDP[sel.index]}\nPopulation: {Population[sel.index]}"))
 
-# creates a legend for better visualization
 plt.legend(["Predicted Values", "Actual Values", "2016 Values"], loc="upper left")
-
-# saves our model so that it can be trained on more data for more accurate results
 joblib.dump(model, "trained_model.joblib")
-
-# Show the plot
 plt.show()

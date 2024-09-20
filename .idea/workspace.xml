@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54df18bc-5304-465b-9a5c-a50da142b696" name="Changes" comment="Code refining and add comments">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GeeksforGeeks23.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GeeksforGeeks23.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="54df18bc-5304-465b-9a5c-a50da142b696" name="Changes" comment="Added requirements.txt to ensure dependencies auto install, I also revisited it because I thought it was predicting 2024 olympics :(">
+      <change afterPath="$PROJECT_DIR$/results.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trained_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medalpredict.py" beforeDir="false" afterPath="$PROJECT_DIR$/medalpredict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689610570348</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added requirements.txt to ensure dependencies auto install, I also revisited it because I thought it was predicting 2024 olympics :(">
+      <created>1726807545216</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726807545216</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -284,6 +290,7 @@
     <MESSAGE value="adding finishing touches to olympic bot.py" />
     <MESSAGE value="Formatting a data set and trained the model and plots it" />
     <MESSAGE value="Code refining and add comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code refining and add comments" />
+    <MESSAGE value="Added requirements.txt to ensure dependencies auto install, I also revisited it because I thought it was predicting 2024 olympics :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added requirements.txt to ensure dependencies auto install, I also revisited it because I thought it was predicting 2024 olympics :(" />
   </component>
 </project>
